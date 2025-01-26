@@ -1,0 +1,49 @@
+:root {
+	--base-size: 16px;
+	--gutter-size:calc(4*var(--base-size));
+
+	--color--primary: black;
+	--color--secondary: gold;
+	--color--background: red;
+
+	font-size: var(--base-size);
+}
+
+h1{
+	color: white;
+}
+
+h2{
+	color:red;
+}
+
+header{
+	background-color: var(--color--background);
+	padding-block: calc(3*var(--base-size));
+}
+
+
+#main-content{
+	block-size: 75vh;
+	padding-block: calc(4*var(--base-size));
+}
+
+footer{
+	background-color: var(--color--secondary);
+	padding-top: var(--base-size);
+	padding-bottom: calc(5*var(--base-size));
+}
+
+.gutters{
+	/* inline: both sides left and right*/
+	/* block: both sides up and down*/
+	padding-inline: var(--gutter-size); 
+}
+
+@media (min-width:600px){
+	:root{
+		--base-size: 20px;
+		--gutter-size: calc(5*var(--base-size));
+
+	}
+}
