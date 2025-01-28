@@ -1,49 +1,141 @@
-:root {
-	--base-size: 16px;
-	--gutter-size:calc(4*var(--base-size));
-
-	--color--primary: black;
-	--color--secondary: gold;
-	--color--background: red;
-
-	font-size: var(--base-size);
+body{
+	height: calc(100vh - 8em);
+	padding: 4em;
+	color: rgba(255,255,255,.75);
+	font-family: 'Anonymous Pro', monospace;  
+	background-color: rgb(25,25,25);  
+  }
+  
+  /* Intro text margins */
+  .gutters {
+	padding-left: 64px;
+	padding-right: 64px;
+  }
+  
+  header {
+	padding-top: 0px;
+	padding-bottom: 32px;
+	border-bottom: 1px solid #eee;
+  }
+  
+/* I want to add a typing effect */
+/* I found this tool on this website：https://css-tricks.com/snippets/css/typewriter-effect/ */
+.line-1{
+    width: 24em;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden; 
 }
 
-h1{
-	color: white;
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 400px;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
 }
 
-h2{
-	color:red;
-}
+  h1 {
+	font-size: 58px;
+	font-weight: 600;
+  }
+  
+  /* The padding of the text linked to the work */
+  section {
+	padding: 32px 0;
+  }
 
-header{
-	background-color: var(--color--background);
-	padding-block: calc(3*var(--base-size));
-}
-
-
-#main-content{
-	block-size: 75vh;
-	padding-block: calc(4*var(--base-size));
-}
-
-footer{
-	background-color: var(--color--secondary);
-	padding-top: var(--base-size);
-	padding-bottom: calc(5*var(--base-size));
-}
-
-.gutters{
-	/* inline: both sides left and right*/
-	/* block: both sides up and down*/
-	padding-inline: var(--gutter-size); 
-}
-
-@media (min-width:600px){
-	:root{
-		--base-size: 20px;
-		--gutter-size: calc(5*var(--base-size));
-
+  /* Term time text size */
+  h2 {
+	font-size: 24px;
+	color: #666;
+	margin-bottom: 24px;
+  }
+  
+  /* item list */
+  ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: grid;
+	gap: 24px;
+  }
+  
+  /* I want an animated transition to appear smooth when the background color changes */
+  /* I want the border to be smooth */
+  li a {
+	text-decoration: none;
+	color: inherit;
+	display: block;
+	padding: 16px;
+	border-radius: 8px;
+	transition: background 0.2s ease;
+  }
+  
+/* I want the background color to change when the mouse hover is over the link box */
+  li a:hover {
+	background: #303030;
+  }
+  
+  li p:first-child {
+	font-weight: 500;
+	margin: 0 0 4px;
+  }
+  
+  li p:last-child {
+	color: #666;
+	margin: 0;
+	font-size: 16px;
+  }
+  
+  footer {
+	margin-top: 64px;
+	padding-top: 38px;
+	padding-bottom: 38px;
+	text-align: center;
+	border-top: 1px solid #eee;
+	color: #666;
+  }
+  
+  /* Desktop screen size */
+  @media (max-width: 1280px) {
+	body {
+	  padding: 0 15px;
 	}
-}
+  
+	h1 {
+	  font-size: 32px;
+	}
+  
+	.gutters {
+	  padding-left: 0;
+	  padding-right: 0;
+	}
+  
+	ul {
+	  gap: 16px;
+	}
+  }
+  
+   /* Mobile screen size */
+  @media (max-width: 375px) {
+	h1 {
+	  font-size: 28px;
+	}
+  
+	h2 {
+	  font-size: 20px;
+	}
+  
+	li a {
+	  padding: 12px;
+	}
+  }
