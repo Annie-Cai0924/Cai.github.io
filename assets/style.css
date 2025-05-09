@@ -58,22 +58,6 @@ body{
 	gap: 24px;
   }
   
-  /* I want an animated transition to appear smooth when the background color changes */
-  /* I want the border to be smooth */
-  li a {
-	text-decoration: none;
-	color: inherit;
-	display: block;
-	padding: 16px;
-	border-radius: 8px;
-	transition: background 0.2s ease;
-  }
-  
-/* I want the background color to change when the mouse hover is over the link box */
-  li a:hover {
-	background: #303030;
-  }
-  
   li p:first-child {
 	font-weight: 500;
 	margin: 0 0 4px;
