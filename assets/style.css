@@ -1,9 +1,9 @@
 body{
 	height: calc(100vh - 8em);
 	padding: 4em;
-	color: rgba(255,255,255,.75);
+	color: rgba(0, 0, 0, 0.75);
 	font-family: 'Anonymous Pro', monospace;  
-	background-color: rgb(25,25,25);  
+	background-color: rgb(255, 255, 255);  
   }
   
   /* Intro text margins */
@@ -15,19 +15,8 @@ body{
   header {
 	padding-top: 0px;
 	padding-bottom: 32px;
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid #000000;
   }
-  
-/* I want to add a typing effect */
-/* I found this tool on this website：https://css-tricks.com/snippets/css/typewriter-effect/ */
-.line-1{
-    width: 24em;
-    border-right: 2px solid rgba(255,255,255,.75);
-    font-size: 180%;
-    text-align: right;
-    white-space: nowrap;
-    overflow: hidden; 
-}
 
 /* Animation */
 .anim-typewriter{
