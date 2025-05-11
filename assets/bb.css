@@ -1,0 +1,46 @@
+.marked {
+    outline: 2px solid red;
+    stroke: red;
+    stroke-width: 2;
+}
+
+.svg {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    overflow: visible;
+    mix-blend-mode: multiply;
+}
+
+.svg--defs {
+    width: 0;
+    height: 0;
+}
+
+.Bubble {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    isolation: isolate;
+    z-index: -1;
+}
+
+.bubble {
+    cursor: pointer;
+}
+
+.bubble-splash {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.Bubble-title {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
