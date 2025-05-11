@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: Neue;
+    src: url(../font/Neue-RegularItalic.otf);
+}
+
+@font-face {
+    font-family: Futura;
+    src: url(../font/FuturaCyrillicBold.ttf);
+}
+
 html {
     overflow-x: hidden;
 }
