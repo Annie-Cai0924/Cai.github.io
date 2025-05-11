@@ -248,7 +248,7 @@ function setupFallingLinks() {
                 const linkBody = Matter.Bodies.rectangle(x, y, width, height, {
                     restitution: 0.6,
                     friction: 0.1,
-                    frictionAir: 0.03,
+                    frictionAir: 0.05,
                     angle: Math.random() * Math.PI
                 });
         //Add this linked rigid body to the physical world
