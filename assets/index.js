@@ -187,7 +187,7 @@ function setupFallingLinks() {
     engineContainer.style.left = '0';
     engineContainer.style.width = '100%';
     engineContainer.style.height = '100%';
-    engineContainer.style.pointerEvents = 'none';
+    engineContainer.style.pointerEvents = 'auto';
     engineContainer.style.zIndex = '-1';
     engineContainer.id = 'matter-container';
     linksContainer.appendChild(engineContainer);
