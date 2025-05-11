@@ -1,114 +1,181 @@
-body{
-	height: calc(100vh - 8em);
-	padding: 4em;
-	color: rgba(0, 0, 0, 0.75);
-	font-family: 'Anonymous Pro', monospace;  
-	background-color: rgb(255, 255, 255);  
-  }
-  
-  /* Intro text margins */
-  .gutters {
-	padding-left: 64px;
-	padding-right: 64px;
-  }
-  
-  header {
-	padding-top: 0px;
-	padding-bottom: 32px;
-	border-bottom: 1px solid #000000;
-  }
-
-/* Animation */
-.anim-typewriter{
-  animation: typewriter 4s steps(44) 1s 1 normal both,
-             blinkTextCursor 500ms steps(44) infinite normal;
-}
-@keyframes typewriter{
-  from{width: 0;}
-  to{width: 400px;}
-}
-@keyframes blinkTextCursor{
-  from{border-right-color: rgba(255,255,255,.75);}
-  to{border-right-color: transparent;}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-  h1 {
-	font-size: 58px;
-	font-weight: 600;
-  }
-  
-  /* The padding of the text linked to the work */
-  section {
-	padding: 32px 0;
-  }
+html {
+    overflow-x: hidden;
+}
 
-  /* Term time text size */
-  h2 {
-	font-size: 24px;
-	color: #666;
-	margin-bottom: 24px;
-  }
-  
-  /* item list */
-  ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	display: grid;
-	gap: 24px;
-  }
-  
-  li p:first-child {
-	font-weight: 500;
-	margin: 0 0 4px;
-  }
-  
-  li p:last-child {
-	color: #666;
-	margin: 0;
-	font-size: 16px;
-  }
-  
-  footer {
-	margin-top: 64px;
-	padding-top: 38px;
-	padding-bottom: 38px;
-	text-align: center;
-	border-top: 1px solid #eee;
-	color: #666;
-  }
-  
-  /* Desktop screen size */
-  @media (max-width: 1280px) {
-	body {
-	  padding: 0 15px;
-	}
-  
-	h1 {
-	  font-size: 32px;
-	}
-  
-	.gutters {
-	  padding-left: 0;
-	  padding-right: 0;
-	}
-  
-	ul {
-	  gap: 16px;
-	}
-  }
-  
-   /* Mobile screen size */
-  @media (max-width: 375px) {
-	h1 {
-	  font-size: 28px;
-	}
-  
-	h2 {
-	  font-size: 20px;
-	}
-  
-	li a {
-	  padding: 12px;
-	}
-  }
+.section {
+    width: 100vw;
+    height: 100vh;
+    pointer-events: auto;
+}
+
+.header {
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    justify-content: left;
+    padding-left: 50px;
+    padding-top: 40px;
+}
+
+.header-title {
+    font-family: Futura;
+    font-size: 64px;
+    color: #000;
+}
+
+.body {
+    width: 100vw;
+    height: calc(100vh - 400px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.body-content-text {
+    font-family: Futura;
+    font-size: 200px;
+    color: #000;
+    text-align: center;
+}
+
+.down-icon {
+    font-size: 50px;
+    color: #000;
+    text-align: center;
+    cursor: pointer;
+}
+
+.down-icon-text {
+    font-family: Inter;
+    font-size: 32px;
+    color: #000;
+}
+
+.footer {
+    width: 100vw;
+    height: 200px;
+    font-family: Futura;
+    font-size: 64px;
+    color: #000;
+    text-align: right;
+    padding-right: 50px;
+}
+
+.footer-content {
+    height: 200px;
+    line-height: 200px;
+}
+
+.body-content-two {
+    font-family: Futura;
+    font-size: 48px;
+    color: #000;
+    text-align: center;
+}
+
+.span-text {
+    font-family: Futura;
+    font-size: 48px;
+    color: #e42a1d;
+}
+
+.body-content-two {
+    position: relative;
+}
+
+.typing-content {
+    display: inline;
+    position: relative;
+}
+
+.cursor {
+    display: inline-block;
+    margin-left: 1px;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.body-content-three {
+    width: 100%;
+    height: 100%;
+}
+
+.body-content-link {
+    height: 76px;
+    display: inline-block;
+    font-size: 38px;
+    font-family: Futura;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #000;
+    padding: 10px 50px;
+    border-radius: 38px;
+}
+
+@media (max-width: 376px) {
+    .header-title {
+        font-family: Futura;
+        font-size: 24px;
+        color: #000;
+    }
+
+    .body-content-text {
+        font-family: Futura;
+        font-size: 100px;
+        color: #000;
+        text-align: center;
+    }
+
+    .footer {
+        width: 100vw;
+        height: 200px;
+        font-family: Futura;
+        font-size: 24px;
+        color: #000;
+        text-align: right;
+        padding-right: 50px;
+    }
+
+    .body-content-two {
+        font-family: Futura;
+        font-size: 24px;
+        color: #000;
+        text-align: center;
+    }
+
+    .body-content-two .span-text {
+        font-size: 24px;
+    }
+
+    .body-content-link {
+        height: 38px;
+        display: inline-block;
+        font-size: 19px;
+        font-family: Futura;
+        color: #000;
+        text-align: center;
+        text-decoration: none;
+        border: 1px solid #000;
+        padding: 5px 25px;
+        border-radius: 19px;
+    }
+}
