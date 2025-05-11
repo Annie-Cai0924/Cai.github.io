@@ -194,6 +194,7 @@ function setupFallingLinks() {
     links.forEach(link => {
         link.style.opacity = '0';
         link.style.position = 'absolute';
+        link.style.zIndex = '10';
     });
     //Create an instance of the Matter.js physics engine to control the operation of the entire physical world like gravity, collisions, motion, 
     const engine = Matter.Engine.create();
